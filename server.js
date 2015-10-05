@@ -31,9 +31,6 @@ app.post('/contacts/edit/:id', defaultController.postEdit);
 /*
  * Create node server
  */
-var server = app.listen(3000, function () {
-var host = server.address().address;
-var port = server.address().port;
+var server = app.listen(process.env.PORT || 3000);
 
-  console.log('Example app listening at http://%s:%s', host, port);
-});
+console.log('Example app listening at port', process.env.PORT || 3000);
